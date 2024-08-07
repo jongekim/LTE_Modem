@@ -1,0 +1,268 @@
+The target system is: Generic - 3.6.99 - arm
+The host system is: Darwin - 23.6.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/nordic/ncs/toolchains/580e4ef81c/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/3.21.0/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/nordic/ncs/toolchains/580e4ef81c/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "/Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/3.21.0/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc (Zephyr SDK 0.16.5) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Performing C++ SOURCE FILE Test check_Wall_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_0dc36 && [1/2] Building CXX object CMakeFiles/cmTC_0dc36.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_0dc36
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wformat__Wformat_security_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_237e7 && [1/2] Building CXX object CMakeFiles/cmTC_237e7.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_237e7
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wformat__Wformat_zero_length_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_1c034 && [1/2] Building CXX object CMakeFiles/cmTC_1c034.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_1c034
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wdouble_promotion_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_ac7ed && [1/2] Building CXX object CMakeFiles/cmTC_ac7ed.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_ac7ed
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wpointer_arith_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_8b27f && [1/2] Building CXX object CMakeFiles/cmTC_8b27f.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_8b27f
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wexpansion_to_defined_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_14226 && [1/2] Building CXX object CMakeFiles/cmTC_14226.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_14226
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wlogical_op_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_5b546 && [1/2] Building CXX object CMakeFiles/cmTC_5b546.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_5b546
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wmissing_field_initializers_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_d4040 && [1/2] Building CXX object CMakeFiles/cmTC_d4040.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_d4040
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wpacked_bitfield_compat_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_e0c1d && [1/2] Building CXX object CMakeFiles/cmTC_e0c1d.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_e0c1d
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wvla_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_0bd94 && [1/2] Building CXX object CMakeFiles/cmTC_0bd94.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_0bd94
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_Wunused_but_set_variable_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_b69e4 && [1/2] Building CXX object CMakeFiles/cmTC_b69e4.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_b69e4
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_mstack_protector_guard_global_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_49e95 && [1/2] Building CXX object CMakeFiles/cmTC_49e95.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_49e95
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fno_freestanding_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_1acec && [1/2] Building CXX object CMakeFiles/cmTC_1acec.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_1acec
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_ffreestanding_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_76716 && [1/2] Building CXX object CMakeFiles/cmTC_76716.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_76716
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_gdwarf_4_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_3ed48 && [1/2] Building CXX object CMakeFiles/cmTC_3ed48.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_3ed48
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fno_asynchronous_unwind_tables_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_ad42a && [1/2] Building CXX object CMakeFiles/cmTC_ad42a.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_ad42a
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_ftls_model_local_exec_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_0d84a && [1/2] Building CXX object CMakeFiles/cmTC_0d84a.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_0d84a
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fno_reorder_functions_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_79130 && [1/2] Building CXX object CMakeFiles/cmTC_79130.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_79130
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check__param_min_pagesize_0_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_b7881 && [1/2] Building CXX object CMakeFiles/cmTC_b7881.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_b7881
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fno_defer_pop_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_f512b && [1/2] Building CXX object CMakeFiles/cmTC_f512b.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_f512b
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map__Users_jongeunkim_Desktop_modem_dev_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_e6a79 && [1/2] Building C object CMakeFiles/cmTC_e6a79.dir/src.c.obj
+[2/2] Linking C executable cmTC_e6a79
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test check_fmacro_prefix_map__Users_jongeunkim_Desktop_modem_dev_CMAKE_SOURCE_DIR_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_36059 && [1/2] Building CXX object CMakeFiles/cmTC_36059.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_36059
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fmacro_prefix_map__opt_nordic_ncs_v2_6_99_zephyr_ZEPHYR_BASE_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_3d882 && [1/2] Building CXX object CMakeFiles/cmTC_3d882.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_3d882
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fmacro_prefix_map__opt_nordic_ncs_v2_6_99_WEST_TOPDIR_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_07b65 && [1/2] Building CXX object CMakeFiles/cmTC_07b65.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_07b65
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_ffunction_sections_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_0f8b5 && [1/2] Building CXX object CMakeFiles/cmTC_0f8b5.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_0f8b5
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test check_fdata_sections_CXX__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_580e4ef81c_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: /Users/jongeunkim/Desktop/modem_dev/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/nordic/ncs/toolchains/580e4ef81c/bin/ninja cmTC_1f460 && [1/2] Building CXX object CMakeFiles/cmTC_1f460.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_1f460
+
+
+Source file was:
+int main() { return 0; }
