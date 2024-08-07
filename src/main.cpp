@@ -309,10 +309,9 @@ void GPIOTE_IRQHandler(){
 
                         while (cnt<10)
                         {
-                                
+        
                                 printk("Enter Loop %d\n",cnt);
                                 lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
-                                getmes = false;
                                 k_busy_wait(4900000);
                                 cnt++;
                                 if(getmes == true){

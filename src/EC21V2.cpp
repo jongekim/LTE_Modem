@@ -4,6 +4,7 @@
 static uint8_t rxBuffer[255] = {0};
 char EC21::lastQuery[255] = {0};
 uint16_t EC21::error_code = 0;
+char Hello[6]="Hello";
 bool getmes = false;
 
 /* Global Functions */
@@ -77,8 +78,12 @@ void EC21::UARTE_IRQHandler(){
     }
     if(NRF_UARTE0->EVENTS_ENDRX == 1){
         NRF_UARTE0->EVENTS_ENDRX = 0;
-        getmes = true;
         printk("%s\n", rxBuffer); //주석 해제 처리
+        if (strstr((char *)rxBuffer,Hello)!=NULL)
+        {
+            getmes = true;
+        }
+        
         parseCommand((const char *)rxBuffer);
         memset(rxBuffer, 0x00, 255);
     }
