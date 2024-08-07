@@ -194,81 +194,81 @@ void GPIOTE_IRQHandler(){
                 NRF_GPIOTE->EVENTS_IN[0] = 0;
 
                         //AWS연결
-                        lte.Query("AT+CEREG?");
+                        lte.Query("AT+CEREG?\r\n");
                         k_busy_wait(2000000);
                         printk("1\n");
 
-                        lte.Query("AT+QENG=\"servingcell\"");
+                        lte.Query("AT+QENG=\"servingcell\"\r\n");
                         k_busy_wait(2000000);
                         printk("2\n");
 
-                        lte.Query("AT+QIACT=1");
+                        lte.Query("AT+QIACT=1\r\n");
                         k_busy_wait(2000000);
                         printk("3\n");
 
-                        lte.Query("AT+CGPADDR=1");
+                        lte.Query("AT+CGPADDR=1\r\n");
                         k_busy_wait(2000000);
                         printk("4\n");
 
-                        lte.Query("AT+QPING=1,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\"");
+                        lte.Query("AT+QPING=1,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\"\r\n");
                         k_busy_wait(3000000);
                         printk("5\n");
 
-                        lte.Query("AT+QFLST=\"*\"");
+                        lte.Query("AT+QFLST=\"*\"\r\n");
                         k_busy_wait(2000000);
                         printk("6\n");
 
-                        lte.Query("AT+QMTCFG=\"recv/mode\",0,0,1");
+                        lte.Query("AT+QMTCFG=\"recv/mode\",0,0,1\r\n");
                         k_busy_wait(2000000);
                         printk("7\n");
 
-                        lte.Query("AT+QMTCFG=\"ssl\",0,1,2");
+                        lte.Query("AT+QMTCFG=\"ssl\",0,1,2\r\n");
                         k_busy_wait(2000000);
                         printk("8\n");
 
-                        lte.Query("AT+QSSLCFG=\"cacert\",2,\"cacert.pem\"");
+                        lte.Query("AT+QSSLCFG=\"cacert\",2,\"cacert.pem\"\r\n");
                         k_busy_wait(2000000);
                         printk("9\n");
 
-                        lte.Query("AT+QSSLCFG=\"clientcert\",2,\"client.pem\"");
+                        lte.Query("AT+QSSLCFG=\"clientcert\",2,\"client.pem\"\r\n");
                         k_busy_wait(2000000);
                         printk("10\n");
 
-                        lte.Query("AT+QSSLCFG=\"clientkey\",2,\"user_key.pem\"");
+                        lte.Query("AT+QSSLCFG=\"clientkey\",2,\"user_key.pem\"\r\n");
                         k_busy_wait(2000000);
                         printk("11\n");
 
-                        lte.Query("AT+QSSLCFG=\"seclevel\",2,2");
+                        lte.Query("AT+QSSLCFG=\"seclevel\",2,2\r\n");
                         k_busy_wait(2000000);
                         printk("12\n");
 
-                        lte.Query("AT+QSSLCFG=\"sslversion\",2,4");
+                        lte.Query("AT+QSSLCFG=\"sslversion\",2,4\r\n");
                         k_busy_wait(2000000);
                         printk("13\n");
 
-                        lte.Query("AT+QSSLCFG=\"ciphersuite\",2,0xFFFF");
+                        lte.Query("AT+QSSLCFG=\"ciphersuite\",2,0xFFFF\r\n");
                         k_busy_wait(2000000);
                         printk("14\n");
 
-                        lte.Query("AT+QSSLCFG=\"ignorelocaltime\",2,1");
+                        lte.Query("AT+QSSLCFG=\"ignorelocaltime\",2,1\r\n");
                         k_busy_wait(2000000);
                         printk("15\n");
 
-                        lte.Query("AT+QMTOPEN=0,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\",8883");
+                        lte.Query("AT+QMTOPEN=0,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\",8883\r\n");
                         k_busy_wait(2000000);
                         printk("16\n");
 
-                        lte.Query("AT+QMTCONN=0,\"smartKit001\"");
+                        lte.Query("AT+QMTCONN=0,\"smartKit001\"\r\n");
                         k_busy_wait(2000000);
                         printk("17\n");
                         //연결 완료
                         printk("AWS Connected\n");
 
-                        lte.Query("AT+QMTPUBEX=0,1,1,0,\"aws/smartKit001/data/report/message\",23");
+                        lte.Query("AT+QMTPUBEX=0,1,1,0,\"aws/smartKit001/data/report/message\",23\r\n");
                         k_busy_wait(2000000);
                         printk("18\n");
 
-                        lte.Query("{\"message\": \"TEST\"}");
+                        lte.Query("{\"message\": \"TEST\"}\r\n");
                         k_busy_wait(2000000);
                         printk("19\n");
 
@@ -291,15 +291,15 @@ void GPIOTE_IRQHandler(){
                         NRF_POWER->TASKS_LOWPWR = 1;
 
                          // LTE 및 GNSS 저전력 모드 활성화
-                        lte.Query("AT+CSCLK=1"); // 저전력 모드 활성화 명령어
+                        lte.Query("AT+CSCLK=1\r\n"); // 저전력 모드 활성화 명령어
                         k_busy_wait(2000000);
                         printk("20\n");
 
-                        lte.Query("AT+QGPSCFG=\"gnssconfig\",0"); // GNSS 저전력 모드 활성화
+                        lte.Query("AT+QGPSCFG=\"gnssconfig\",0\r\n"); // GNSS 저전력 모드 활성화
                         k_busy_wait(2000000);
                         printk("21\n");
 
-                        lte.Query("AT+QGPSEND"); // GNSS 비활성화
+                        lte.Query("AT+QGPSEND\r\n"); // GNSS 비활성화
                         k_busy_wait(2000000);
                         printk("22\n");
 
@@ -309,7 +309,7 @@ void GPIOTE_IRQHandler(){
                         while (cnt<10)
                         {
                                 printk("Enter Loop %d\n",cnt);
-                                lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1");
+                                lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
                                 k_busy_wait(4900000);
                                 cnt++;
                                 if(NRF_UARTE0->EVENTS_ENDRX == 1){
@@ -335,11 +335,11 @@ void GPIOTE_IRQHandler(){
                         NRF_TIMER2->TASKS_START = 1; // 타이머2 시작
 
                         // LTE 및 GNSS 정상 모드 복귀
-                        lte.Query("AT+CSCLK=0"); // 저전력 모드 해제 명령어
+                        lte.Query("AT+CSCLK=0\r\n"); // 저전력 모드 해제 명령어
                         k_busy_wait(2000000);
                         printk("23\n");
 
-                        lte.Query("AT+QGPS=1"); // GNSS 활성화
+                        lte.Query("AT+QGPS=1\r\n"); // GNSS 활성화
                         k_busy_wait(2000000);
                         printk("24\n");
 
