@@ -296,9 +296,9 @@ void GPIOTE_IRQHandler(){
                         k_busy_wait(2000000);
                         printk("20\n");
 
-                        lte.Query("AT+QGPSCFG=\"gnssconfig\",0\r\n"); // GNSS 저전력 모드 활성화
-                        k_busy_wait(2000000);
-                        printk("21\n");
+                        //lte.Query("AT+QGPSCFG=\"gnssconfig\",0\r\n"); // GNSS 저전력 모드 활성화
+                        //k_busy_wait(2000000);
+                        //printk("21\n");
 
                         lte.Query("AT+QGPSEND\r\n"); // GNSS 비활성화
                         k_busy_wait(2000000);
