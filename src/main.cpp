@@ -308,7 +308,9 @@ void GPIOTE_IRQHandler(){
 
                         while (cnt<10)
                         {
+                                
                                 printk("Enter Loop %d\n",cnt);
+                                //printk("NRF_UARTE0->EVENTS_ENDRX == %d\n",NRF_UARTE0->EVENTS_ENDRX);
                                 lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
                                 k_busy_wait(4900000);
                                 cnt++;

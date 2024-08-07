@@ -76,7 +76,7 @@ void EC21::UARTE_IRQHandler(){
     }
     if(NRF_UARTE0->EVENTS_ENDRX == 1){
         NRF_UARTE0->EVENTS_ENDRX = 0;
-        printk("%s\n", rxBuffer); //주석 해제 처리
+        //printk("%s\n", rxBuffer); //주석 해제 처리
         parseCommand((const char *)rxBuffer);
         memset(rxBuffer, 0x00, 255);
     }
