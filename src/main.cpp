@@ -318,6 +318,7 @@ void GPIOTE_IRQHandler(){
                                         break;
                                 }
                         }
+                        getmes = false;
                         
                         cnt = 0;
                  
@@ -337,9 +338,9 @@ void GPIOTE_IRQHandler(){
                         NRF_TIMER2->TASKS_START = 1; // 타이머2 시작
 
                         // LTE 및 GNSS 정상 모드 복귀
-                        lte.Query("AT+CSCLK=0\r\n"); // 저전력 모드 해제 명령어
-                        k_busy_wait(2000000);
-                        printk("23\n");
+                        //lte.Query("AT+CSCLK=0\r\n"); // 저전력 모드 해제 명령어
+                        //k_busy_wait(2000000);
+                        //printk("23\n");
 
                         lte.Query("AT+QGPS=1\r\n"); // GNSS 활성화
                         k_busy_wait(2000000);
