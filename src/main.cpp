@@ -23,6 +23,7 @@ UARTE uarte;
 EC21 lte;
 RTC rtc;
 EC21_DEVICE_INFO ec21_device_info;
+extern bool getmes;
 
 // External Handler
 void EC21_EventHandler(uint16_t EC21_EVENT_TYPE);
@@ -310,11 +311,11 @@ void GPIOTE_IRQHandler(){
                         {
                                 
                                 printk("Enter Loop %d\n",cnt);
-                                //printk("NRF_UARTE0->EVENTS_ENDRX == %d\n",NRF_UARTE0->EVENTS_ENDRX);
                                 lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
+                                getmes = false;
                                 k_busy_wait(4900000);
                                 cnt++;
-                                if(NRF_UARTE0->EVENTS_ENDRX == 1){
+                                if(getmes == true){
                                         break;
                                 }
                         }

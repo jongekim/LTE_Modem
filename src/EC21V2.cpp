@@ -4,6 +4,7 @@
 static uint8_t rxBuffer[255] = {0};
 char EC21::lastQuery[255] = {0};
 uint16_t EC21::error_code = 0;
+bool getmes = false;
 
 /* Global Functions */
 EC21_CONFIG EC21::CONFIG;
@@ -76,7 +77,8 @@ void EC21::UARTE_IRQHandler(){
     }
     if(NRF_UARTE0->EVENTS_ENDRX == 1){
         NRF_UARTE0->EVENTS_ENDRX = 0;
-        //printk("%s\n", rxBuffer); //주석 해제 처리
+        getmes = true;
+        printk("%s\n", rxBuffer); //주석 해제 처리
         parseCommand((const char *)rxBuffer);
         memset(rxBuffer, 0x00, 255);
     }
