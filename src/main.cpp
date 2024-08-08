@@ -305,8 +305,8 @@ void GPIOTE_IRQHandler(){
                         printk("TASK_LOWPWR\n");
 
                          // LTE 및 GNSS 저전력 모드 활성화
-                        printk("AT+CSCLK=1\n");
-                        lte.Query("AT+CSCLK=1\r\n"); // 저전력 모드 활성화 명령어
+                        printk("AT+QSCLK=1\n");
+                        lte.Query("AT+QSCLK=1\r\n"); // 저전력 모드 활성화 명령어
                         k_busy_wait(2000000);
                         
 
@@ -327,7 +327,6 @@ void GPIOTE_IRQHandler(){
 
                         while (cnt<10)
                         {
-        
                                 printk("Enter Loop %d\n",cnt);
                                 lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
                                 k_busy_wait(4900000);
@@ -340,7 +339,7 @@ void GPIOTE_IRQHandler(){
                         getmes = false;
                         
                         cnt = 0;
-                 
+                
                      // 외부 신호에 의해 정상 모드로 복귀
                         //NRF_UART0->TASKS_STOPTX = 1; // UART 송신 중지
                         //NRF_UART0->TASKS_STOPRX = 1; // UART 수신 중지
@@ -366,9 +365,10 @@ void GPIOTE_IRQHandler(){
                         printk("Timer2 activated\n");
 
                         // LTE 및 GNSS 정상 모드 복귀
-                        //lte.Query("AT+CSCLK=0\r\n"); // 저전력 모드 해제 명령어
-                        //k_busy_wait(2000000);
-                        //printk("23\n");
+                        printk("AT+QSCLK=0\n");
+                        lte.Query("AT+QSCLK=0\r\n"); // 저전력 모드 해제 명령어
+                        k_busy_wait(2000000);
+                        
 
                         printk("AT+QGPS=1\n");
                         printk("GNSS activated\n");
