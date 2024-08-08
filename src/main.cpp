@@ -195,84 +195,85 @@ void GPIOTE_IRQHandler(){
                 NRF_GPIOTE->EVENTS_IN[0] = 0;
 
                         //AWS연결
+                        printk("AT+CEREG?\n");
                         lte.Query("AT+CEREG?\r\n");
                         k_busy_wait(2000000);
-                        printk("1\n");
-
+                        
+                        printk("AT+QENG=\"servingcell\"\n");
                         lte.Query("AT+QENG=\"servingcell\"\r\n");
                         k_busy_wait(2000000);
-                        printk("2\n");
-
+                        
+                        printk("AT+QIACT=1\n");
                         lte.Query("AT+QIACT=1\r\n");
                         k_busy_wait(2000000);
-                        printk("3\n");
-
+                        
+                        printk("AT+CGPADDR=1\n");
                         lte.Query("AT+CGPADDR=1\r\n");
                         k_busy_wait(2000000);
-                        printk("4\n");
-
+                        
+                        printk("AT+QPING=1,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\"\n");
                         lte.Query("AT+QPING=1,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\"\r\n");
-                        k_busy_wait(3000000);
-                        printk("5\n");
-
+                        k_busy_wait(4000000);
+                        
+                        printk("AT+QFLST=\"*\"\n");
                         lte.Query("AT+QFLST=\"*\"\r\n");
                         k_busy_wait(2000000);
-                        printk("6\n");
-
+                        
+                        printk("AT+QMTCFG=\"recv/mode\",0,0,1\n");
                         lte.Query("AT+QMTCFG=\"recv/mode\",0,0,1\r\n");
                         k_busy_wait(2000000);
-                        printk("7\n");
-
+                        
+                        printk("AT+QMTCFG=\"ssl\",0,1,2\n");
                         lte.Query("AT+QMTCFG=\"ssl\",0,1,2\r\n");
                         k_busy_wait(2000000);
-                        printk("8\n");
-
+                        
+                        printk("AT+QSSLCFG=\"cacert\",2,\"cacert.pem\"\n");
                         lte.Query("AT+QSSLCFG=\"cacert\",2,\"cacert.pem\"\r\n");
                         k_busy_wait(2000000);
-                        printk("9\n");
-
+                        
+                        printk("AT+QSSLCFG=\"clientcert\",2,\"client.pem\"\n");
                         lte.Query("AT+QSSLCFG=\"clientcert\",2,\"client.pem\"\r\n");
                         k_busy_wait(2000000);
-                        printk("10\n");
-
+                        
+                        printk("AT+QSSLCFG=\"clientkey\",2,\"user_key.pem\"\n");
                         lte.Query("AT+QSSLCFG=\"clientkey\",2,\"user_key.pem\"\r\n");
                         k_busy_wait(2000000);
-                        printk("11\n");
-
+                        
+                        printk("AT+QSSLCFG=\"seclevel\",2,2\n");
                         lte.Query("AT+QSSLCFG=\"seclevel\",2,2\r\n");
                         k_busy_wait(2000000);
-                        printk("12\n");
-
+                        
+                        printk("AT+QSSLCFG=\"sslversion\",2,4\n");
                         lte.Query("AT+QSSLCFG=\"sslversion\",2,4\r\n");
                         k_busy_wait(2000000);
-                        printk("13\n");
-
+                        
+                        printk("AT+QSSLCFG=\"ciphersuite\",2,0xFFFF\n");
                         lte.Query("AT+QSSLCFG=\"ciphersuite\",2,0xFFFF\r\n");
                         k_busy_wait(2000000);
-                        printk("14\n");
-
+                        
+                        printk("AT+QSSLCFG=\"ignorelocaltime\",2,1\n");
                         lte.Query("AT+QSSLCFG=\"ignorelocaltime\",2,1\r\n");
                         k_busy_wait(2000000);
-                        printk("15\n");
-
+                        
+                        printk("AT+QMTOPEN=0,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\",8883\n");
                         lte.Query("AT+QMTOPEN=0,\"a3ovp7i619ec6q-ats.iot.us-east-1.amazonaws.com\",8883\r\n");
                         k_busy_wait(2000000);
-                        printk("16\n");
-
+                        
+                        printk("AT+QMTCONN=0,\"smartKit001\"\n");
                         lte.Query("AT+QMTCONN=0,\"smartKit001\"\r\n");
                         k_busy_wait(2000000);
-                        printk("17\n");
+
                         //연결 완료
                         printk("AWS Connected\n");
 
+                        printk("AT+QMTPUBEX=0,1,1,0,\"aws/smartKit001/data/report/message\",23\n");
                         lte.Query("AT+QMTPUBEX=0,1,1,0,\"aws/smartKit001/data/report/message\",23\r\n");
                         k_busy_wait(2000000);
-                        printk("18\n");
-
+                        
+                        printk("{\"message\": \"TEST\"}\n");
                         lte.Query("{\"message\": \"TEST\"}\r\n");
                         k_busy_wait(2000000);
-                        printk("19\n");
-
+                        
                         //송신 테스트 완료
                         printk("AWS message sended\n");
 
@@ -282,33 +283,47 @@ void GPIOTE_IRQHandler(){
                         //NRF_UART0->TASKS_STOPRX = 1; // UART 수신 중지
                         //NRF_UART0->ENABLE = 0; // UART 비활성화
                         NRF_SPI0->ENABLE = 0; // SPI 비활성화
+                        printk("SPI unactivated\n");
+
                         NRF_TWI0->ENABLE = 0; // TWI(I2C) 비활성화
+                        printk("TWI unactivated\n");
+
                         NRF_SAADC->ENABLE = 0; // ADC 비활성화
+                        printk("ADC unactivated\n");
+
                         NRF_TIMER0->TASKS_STOP = 1; // 타이머0 중지
+                        printk("Timer0 unactivated\n");
+
                         NRF_TIMER1->TASKS_STOP = 1; // 타이머1 중지
+                        printk("Timer1 unactivated\n");
+
                         NRF_TIMER2->TASKS_STOP = 1; // 타이머2 중지
+                        printk("Timer2 unactivated\n");
 
                         // 저전력 모드 활성화
                         NRF_POWER->TASKS_LOWPWR = 1;
+                        printk("TASK_LOWPWR\n");
 
                          // LTE 및 GNSS 저전력 모드 활성화
+                        printk("AT+CSCLK=1\n");
                         lte.Query("AT+CSCLK=1\r\n"); // 저전력 모드 활성화 명령어
                         k_busy_wait(2000000);
-                        printk("20\n");
+                        
 
                         //lte.Query("AT+QGPSCFG=\"gnssconfig\",0\r\n"); // GNSS 저전력 모드 활성화
                         //k_busy_wait(2000000);
                         //printk("21\n");
+                        printk("AT+QGPS=1\n");
+                        printk("GNSS init\n");
                         lte.Query("AT+QGPS=1\r\n");//GNSS 초기화
                         k_busy_wait(2000000); 
-                        printk("21\n");
                         
+                        printk("AT+QGPSEND\n");
+                        printk("GNSS unactivated\n");
                         lte.Query("AT+QGPSEND\r\n"); // GNSS 비활성화
                         k_busy_wait(2000000);
-                        printk("22\n");
-
-                        printk("low power mode on\n");
-
+                        
+                        printk("Low power mode on\n");
 
                         while (cnt<10)
                         {
@@ -318,6 +333,7 @@ void GPIOTE_IRQHandler(){
                                 k_busy_wait(4900000);
                                 cnt++;
                                 if(getmes == true){
+                                        printk("Message interrupted!\n");
                                         break;
                                 }
                         }
@@ -325,29 +341,39 @@ void GPIOTE_IRQHandler(){
                         
                         cnt = 0;
                  
-                
                      // 외부 신호에 의해 정상 모드로 복귀
                         //NRF_UART0->TASKS_STOPTX = 1; // UART 송신 중지
                         //NRF_UART0->TASKS_STOPRX = 1; // UART 수신 중지
                         //NRF_UART0->ENABLE = 1; // UART 활성화
                         //NRF_UART0->TASKS_STARTRX = 1; // UART 수신 시작
                         //NRF_UART0->TASKS_STARTTX = 1; // UART 송신 시작
-
                         NRF_SPI0->ENABLE = 1; // SPI 활성화
+                        printk("SPI activated\n");
+                        
                         NRF_TWI0->ENABLE = 1; // TWI(I2C) 활성화
+                        printk("TWI activated\n");
+
                         NRF_SAADC->ENABLE = 1; // ADC 활성화
+                        printk("ADC activated\n");
+
                         NRF_TIMER0->TASKS_START = 1; // 타이머0 시작
+                        printk("Timer0 activated\n");
+
                         NRF_TIMER1->TASKS_START = 1; // 타이머1 시작
+                        printk("Timer1 activated\n");
+
                         NRF_TIMER2->TASKS_START = 1; // 타이머2 시작
+                        printk("Timer2 activated\n");
 
                         // LTE 및 GNSS 정상 모드 복귀
                         //lte.Query("AT+CSCLK=0\r\n"); // 저전력 모드 해제 명령어
                         //k_busy_wait(2000000);
                         //printk("23\n");
 
+                        printk("AT+QGPS=1\n");
+                        printk("GNSS activated\n");
                         lte.Query("AT+QGPS=1\r\n"); // GNSS 활성화
                         k_busy_wait(2000000);
-                        printk("24\n");
 
                         printk("Low power mode off\n");
         }
