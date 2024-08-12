@@ -17,7 +17,6 @@
 #define GPIO_LTE_UART_RX        10
 #define GPIO_LTE_UART_TX        9
 
-
 // External Module Library
 UARTE uarte;
 EC21 lte;
@@ -246,7 +245,7 @@ void GPIOTE_IRQHandler(){
                         printk("AT+QSSLCFG=\"sslversion\",2,4\n");
                         lte.Query("AT+QSSLCFG=\"sslversion\",2,4\r\n");
                         k_busy_wait(2000000);
-                        
+
                         printk("AT+QSSLCFG=\"ciphersuite\",2,0xFFFF\n");
                         lte.Query("AT+QSSLCFG=\"ciphersuite\",2,0xFFFF\r\n");
                         k_busy_wait(2000000);
@@ -276,7 +275,6 @@ void GPIOTE_IRQHandler(){
                         
                         //송신 테스트 완료
                         printk("AWS message sended\n");
-
 
                         // 저전력 모드로 진입
                         //NRF_UART0->TASKS_STOPTX = 1; // UART 송신 중지
@@ -308,7 +306,6 @@ void GPIOTE_IRQHandler(){
                         printk("AT+QSCLK=1\n");
                         lte.Query("AT+QSCLK=1\r\n"); // 저전력 모드 활성화 명령어
                         k_busy_wait(2000000);
-                        
 
                         //lte.Query("AT+QGPSCFG=\"gnssconfig\",0\r\n"); // GNSS 저전력 모드 활성화
                         //k_busy_wait(2000000);
@@ -317,19 +314,18 @@ void GPIOTE_IRQHandler(){
                         printk("GNSS init\n");
                         lte.Query("AT+QGPS=1\r\n");//GNSS 초기화
                         k_busy_wait(2000000); 
-                        
+
                         printk("AT+QGPSEND\n");
                         printk("GNSS unactivated\n");
                         lte.Query("AT+QGPSEND\r\n"); // GNSS 비활성화
                         k_busy_wait(2000000);
-                        
+
                         printk("Low power mode on\n");
 
                         while (cnt<10)
                         {
                                 printk("Enter Loop %d\n",cnt);
                                 lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
-                                k_busy_wait(4900000);
                                 cnt++;
                                 if(getmes == true){
                                         printk("Message interrupted!\n");
@@ -369,7 +365,6 @@ void GPIOTE_IRQHandler(){
                         lte.Query("AT+QSCLK=0\r\n"); // 저전력 모드 해제 명령어
                         k_busy_wait(2000000);
                         
-
                         printk("AT+QGPS=1\n");
                         printk("GNSS activated\n");
                         lte.Query("AT+QGPS=1\r\n"); // GNSS 활성화
