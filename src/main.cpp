@@ -201,11 +201,11 @@ void GPIOTE_IRQHandler(){
                         lte.Query("AT+QGPS=1\r\n");
                         k_busy_wait(2000000);
 
-                        printk("AT+QCFG="band",F,80A,80A"\n);
+                        printk("AT+QCFG=\"band\",F,80A,80A"\n);
                         lte.Query("AT+QCFG=\"band\",F,80A,80A\r\n");
                         k_busy_wait(2000000); 
 
-                        printk("AT+COPS=4,2,"310410""\n);
+                        printk("AT+COPS=4,2,\"310410\""\n);
                         lte.Query("AT+COPS=4,2,\"310410\"\r\n");
                         k_busy_wait(2000000);   
 
@@ -217,7 +217,7 @@ void GPIOTE_IRQHandler(){
                         lte.Query("AT+CSCLK=0\r\n");
                         k_busy_wait(2000000);
 
-                        printk("AT+QCFG="powerclass",1,1");
+                        printk("AT+QCFG=\"powerclass\",1,1");
                         lte.Query("AT+QCFG=\"powerclass\",1,1\r\n");
                         k_busy_wait(2000000);
 
@@ -312,7 +312,7 @@ void GPIOTE_IRQHandler(){
 
                         printk("Low power mode starting...\n");
 
-                        printk("AT+QCFG="powerclass",1,0\n");
+                        printk("AT+QCFG=\"powerclass\",1,0\n");
                         lte.Query("AT+QCFG=\"powerclass\",1,0\r\n");
                         k_busy_wait(2000000);
 
@@ -351,7 +351,7 @@ void GPIOTE_IRQHandler(){
                         k_busy_wait(2000000);
 
                         printk("AT+QCFG=\"band\",F,1,1\n");
-                        lte.Query("AT+QCFG="band",F,1,1\r\n");
+                        lte.Query("AT+QCFG=\"band\",F,1,1\r\n");
                         k_busy_wait(2000000); 
 
 
@@ -417,7 +417,7 @@ void GPIOTE_IRQHandler(){
                         printk("Timer2 activated\n");
 
 
-                        printk("AT+QCFG="powerclass",1,0\n");
+                        printk("AT+QCFG=\"powerclass\",1,0\n");
                         lte.Query("AT+QCFG=\"powerclass\",1,0\r\n");
 
                         // LTE 및 GNSS 정상 모드 복귀
