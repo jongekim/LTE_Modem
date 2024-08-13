@@ -192,36 +192,36 @@ void GPIOTE_IRQHandler(){
 
         if(NRF_GPIOTE->EVENTS_IN[0] == 1){
                 NRF_GPIOTE->EVENTS_IN[0] = 0;
-
+                        /*
                         printk("AT+CFUN=1\n");
                         lte.Query("AT+CFUN=1\r\n");
-                        k_busy_wait(2000000); 
+                        k_busy_wait(2000000);
 
-                        printk("AT+QGPS=1"\n);
+                        printk("AT+QGPS=1\n");
                         lte.Query("AT+QGPS=1\r\n");
                         k_busy_wait(2000000);
 
-                        printk("AT+QCFG=\"band\",F,80A,80A"\n);
-                        lte.Query("AT+QCFG=\"band\",F,80A,80A\r\n");
-                        k_busy_wait(2000000); 
+                        ///printk("AT+QCFG=\"band\",F,80A,80A\n");
+                        ///lte.Query("AT+QCFG=\"band\",F,80A,80A\r\n");
+                        ///k_busy_wait(2000000); 
 
-                        printk("AT+COPS=4,2,\"310410\""\n);
+                        printk("AT+COPS=4,2,\"310410\"\n");
                         lte.Query("AT+COPS=4,2,\"310410\"\r\n");
                         k_busy_wait(2000000);   
 
-                        printk("AT+CREG=2"\n);
+                        printk("AT+CREG=2\n");
                         lte.Query("AT+CREG=2\r\n");
                         k_busy_wait(2000000); 
 
-                        printk("AT+CSCLK=0\n");
-                        lte.Query("AT+CSCLK=0\r\n");
+                        printk("AT+QSCLK=0\n");
+                        lte.Query("AT+QSCLK=0\r\n");
                         k_busy_wait(2000000);
 
-                        printk("AT+QCFG=\"powerclass\",1,1");
-                        lte.Query("AT+QCFG=\"powerclass\",1,1\r\n");
-                        k_busy_wait(2000000);
+                        //printk("AT+QCFG=\"powerclass\",1,1\n");
+                        //lte.Query("AT+QCFG=\"powerclass\",1,1\r\n");
+                        //k_busy_wait(2000000);
 
-
+                        */
                         //AWS연결
                         printk("AT+CEREG?\n");
                         lte.Query("AT+CEREG?\r\n");
@@ -312,9 +312,11 @@ void GPIOTE_IRQHandler(){
 
                         printk("Low power mode starting...\n");
 
+                        /*
                         printk("AT+QCFG=\"powerclass\",1,0\n");
                         lte.Query("AT+QCFG=\"powerclass\",1,0\r\n");
                         k_busy_wait(2000000);
+                        */
 
                         NRF_SPI0->ENABLE = 0; // SPI 비활성화
                         printk("SPI unactivated\n");
@@ -338,6 +340,7 @@ void GPIOTE_IRQHandler(){
                         NRF_POWER->TASKS_LOWPWR = 1;
                         printk("TASK_LOWPWR\n");
 
+                        /*
                         printk("AT+QGPSEND\n");
                         lte.Query("AT+QGPSEND\r\n");
                         k_busy_wait(2000000);
@@ -353,7 +356,7 @@ void GPIOTE_IRQHandler(){
                         printk("AT+QCFG=\"band\",F,1,1\n");
                         lte.Query("AT+QCFG=\"band\",F,1,1\r\n");
                         k_busy_wait(2000000); 
-
+                        */
 
                          // LTE 및 GNSS 저전력 모드 활성화
                         printk("AT+QSCLK=1\n");
@@ -379,7 +382,7 @@ void GPIOTE_IRQHandler(){
                         {
                                 printk("Enter Loop %d\n",cnt);
                                 lte.Query("AT+QMTSUB=0,1,\"aws/smartKit001/data/report/message\",1\r\n");
-                                k_sleep(K_MSEC(10000));
+                                k_busy_wait(10000000);
                                 cnt++;
                                 if(getmes == true){
                                         printk("Message interrupted!\n");
